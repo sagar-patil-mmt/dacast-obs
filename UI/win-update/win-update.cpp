@@ -374,7 +374,7 @@ try {
 	vector<string> extraHeaders;
 
 	BPtr<char> updateFilePath = GetConfigPathPtr(
-			"obs-studio\\updates\\updater.exe");
+			"dacast-obs-studio\\updates\\updater.exe");
 
 	if (CalculateFileHash(updateFilePath, updateFileHash)) {
 		char hashString[BLAKE2_HASH_STR_LENGTH];
@@ -551,7 +551,7 @@ try {
 	} finishedTrigger;
 
 	BPtr<char> manifestPath = GetConfigPathPtr(
-			"obs-studio\\updates\\manifest.json");
+			"dacast-obs-studio\\updates\\manifest.json");
 
 	auto ActiveOrGameCaptureLocked = [this] ()
 	{
@@ -736,7 +736,7 @@ try {
 	 * execute updater                     */
 
 	BPtr<char> updateFilePath = GetConfigPathPtr(
-			"obs-studio\\updates\\updater.exe");
+			"dacast-obs-studio\\updates\\updater.exe");
 	BPtr<wchar_t> wUpdateFilePath;
 
 	size_t size = os_utf8_to_wcs_ptr(updateFilePath, 0, &wUpdateFilePath);

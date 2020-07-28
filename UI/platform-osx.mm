@@ -41,13 +41,13 @@ bool GetDataFilePath(const char *data, string &output)
 			[NSRunningApplication currentApplication];
 		NSURL *bundleURL = [app bundleURL];
 		NSString *path = [NSString
-			stringWithFormat:@"Contents/Resources/data/obs-studio/%@",
+			stringWithFormat:@"Contents/Resources/data/dacast-obs-studio/%@",
 					 [NSString stringWithUTF8String:data]];
 		NSURL *dataURL = [bundleURL URLByAppendingPathComponent:path];
 		output = [[dataURL path] UTF8String];
 	} else {
 		stringstream str;
-		str << OBS_DATA_PATH "/obs-studio/" << data;
+		str << OBS_DATA_PATH "/dacast-obs-studio/" << data;
 		output = str.str();
 	}
 
